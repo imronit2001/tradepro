@@ -22,504 +22,598 @@
     <link rel="stylesheet" href="css/vertical-layout-light/style.css" />
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+    <style>
+        .step {
+            display: none;
+        }
+
+        /* Make circles that indicate the steps of the form: */
+        .step2 {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbbbbb;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.5;
+        }
+
+        /* Mark the active step2: */
+        .step2.active {
+            opacity: 1;
+        }
+
+        /* Mark the step2s that are finished and valid: */
+        .step2.finish {
+            background-color: #04AA6D;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-scroller">
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
-                <div class="card">
+                <div class="card-body">
                     <div class="card-body">
                         <h2 class="card-title text-center">Vendor Registration Form</h2>
                         <p class="card-description text-center">
                             (Please fillup your information carefully)
                         </p>
 
-                        <form class="form-sample px-3">
-                            <h4 class="card-title">Personal Information</h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">First Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Last Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">Constitution of the Vendor:</label>
-                                    <div class="col-sm-2">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    name="membershipCheckbox[]" id="membershipCheckbox1" value=""
-                                                    checked>
-                                                Partnership
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    name="membershipCheckbox[]" id="membershipCheckbox2"
-                                                    value="option2">
-                                                Proprietorship
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    name="membershipCheckbox[]" id="membershipCheckbox2"
-                                                    value="option2">
-                                                Private Limited
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    name="membershipCheckbox[]" id="membershipCheckbox2"
-                                                    value="option2">
-                                                Public Limited
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="card-title">
-                                Registered Address
-                            </h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Unit No</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">City</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Complete Address</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="4"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Pin Code</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">State</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="card-title">
-                                Contact Details
-                            </h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Contact Person</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Mobile Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Landline Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Fax No</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Email Id</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="card-title">
-                                Billing Address
-                            </h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Billing Address</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="4"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Description of Business</label>
-                                        <div class="col-sm-9">
-                                            <textarea class="form-control" rows="4"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Commodities Traded</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Annual Quantity Traded</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Annual Revenue</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Company PAN</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">CIN</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="card-title">
-                                Expected Business Volumes with Suumaya
-                            </h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Monthly average INR</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Annual estimate INR</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="card-title">
-                                Business Profile
-                            </h4>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Core Sector</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">No. of years in the Sector</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Non-Core Sector</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">No. of years in the Sector</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Total count of people on payroll (direct
-                                            on payroll + indirect third-party employees)</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <form class="form-sample p-4 col-md-10 m-auto card mt-5 border" id="regForm" action="">
 
-                            <div class="col-md-12">
-                                <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label">MSME Certificate:</label>
-                                    <div class="col-sm-2">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    name="membershipCheckbox[]" id="membershipCheckbox1" value=""
-                                                    checked>
-                                                Yes
-                                            </label>
+                            <div class="step p-3">
+                                <h4 class="card-title">Personal Information</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">First Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-check">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    name="membershipCheckbox[]" id="membershipCheckbox2"
-                                                    value="option2">
-                                                No
-                                            </label>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Last Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">MSME Certificate No</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Vendor Relationship Manager</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h4 class="card-title">
-                                Vendor’s accounts team details
-                            </h4>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Mobile</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Designation</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-6 col-form-label">Proposed payment terms with SAL</label>
-                                        <div class="col-sm-6">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h4 class="card-title">
-                                Bank Details
-                            </h4>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Bank Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Account Name</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Account Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Account Currency</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">IFSC Code</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <br>
-                            <h4 class="card-title">
-                                Terms and Conditions
-                            </h4>
-                            <div class="row">
                                 <div class="col-md-12">
-                                    <ol>
-                                        <li>Suppliers must respect and comply with all applicable local and
-                                            international laws,
-                                            regulations and relevant industry codes when working with us and in the
-                                            countries in which
-                                            they operate.</li>
-                                        <li>Suppliers must keep information relating to ourselves and our clients
-                                            strictly confidential
-                                            and secure. All paper and electronic records must be kept secure, and
-                                            security measures
-                                            must be in place to prevent unauthorized access to systems containing our
-                                            information or
-                                            that of our clients</li>
-                                        <li>Suppliers must comply with all relevant local health and safety laws and
-                                            regulations and
-                                            generally offer a work environment that is safe, conducive to good health
-                                        </li>
-                                        <li>The invoices issued must show the actual price of the goods described and
-                                            the supplier
-                                            undertakes that all particulars are true and correct</li>
-                                    </ol>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">Constitution of the Vendor:</label>
+                                        <div class="col-sm-2">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        name="membershipCheckbox[]" id="membershipCheckbox1" value=""
+                                                        checked />
+                                                    Partnership
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        name="membershipCheckbox[]" id="membershipCheckbox2"
+                                                        value="option2" />
+                                                    Proprietorship
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        name="membershipCheckbox[]" id="membershipCheckbox2"
+                                                        value="option2" />
+                                                    Private Limited
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        name="membershipCheckbox[]" id="membershipCheckbox2"
+                                                        value="option2" />
+                                                    Public Limited
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="step p-3">
+                                <h4 class="card-title">Registered Address</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Unit No</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">City</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Complete Address</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Pin Code</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">State</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="card-title">Contact Details</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Contact Person</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Mobile Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Landline Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Fax No</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Email Id</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="step p-3">
+                                <h4 class="card-title">Billing Address</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Billing Address</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="card-title">Contact Details</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Contact Person</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Mobile Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Landline Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Fax No</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Email Id</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="step p-3">
+                                <h4 class="card-title">Business Information</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Description of Business</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Commodities Traded</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Annual Quantity Traded</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Annual Revenue</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Company PAN</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">CIN</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="card-title">
+                                    Expected Business Volumes with Suumaya
+                                </h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Monthly average INR</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Annual estimate INR</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="card-title">Business Profile</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Core Sector</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">No. of years in the
+                                                Sector</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Non-Core Sector</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">No. of years in the
+                                                Sector</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Total count of people on payroll
+                                                (direct
+                                                on payroll +
+                                                indirect third-party employees)</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label">MSME Certificate:</label>
+                                        <div class="col-sm-2">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        name="membershipCheckbox[]" id="membershipCheckbox1" value=""
+                                                        checked />
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input type="checkbox" class="form-check-input"
+                                                        name="membershipCheckbox[]" id="membershipCheckbox2"
+                                                        value="option2" />
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">MSME Certificate No</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Vendor Relationship
+                                                Manager</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4 class="card-title">Vendor’s accounts team details</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Mobile</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Designation</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-6 col-form-label">Proposed payment terms with
+                                                SAL</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="step p-3">
+
+                                <h4 class="card-title">Bank Details</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Bank Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Account Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Account Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Account Currency</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">IFSC Code</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="step p-3">
+                                <h4 class="card-title">Terms and Conditions</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ol>
+                                            <li>
+                                                Suppliers must respect and comply with all applicable
+                                                local and international laws, regulations and relevant
+                                                industry codes when working with us and in the countries
+                                                in which they operate.
+                                            </li>
+                                            <li>
+                                                Suppliers must keep information relating to ourselves
+                                                and our clients strictly confidential and secure. All
+                                                paper and electronic records must be kept secure, and
+                                                security measures must be in place to prevent
+                                                unauthorized access to systems containing our
+                                                information or that of our clients
+                                            </li>
+                                            <li>
+                                                Suppliers must comply with all relevant local health and
+                                                safety laws and regulations and generally offer a work
+                                                environment that is safe, conducive to good health
+                                            </li>
+                                            <li>
+                                                The invoices issued must show the actual price of the
+                                                goods described and the supplier undertakes that all
+                                                particulars are true and correct
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"
+                                                    name="membershipCheckbox[]" id="membershipCheckbox1" value="" />
+                                                I have read and agreed to the terms and conditions set
+                                                out above.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
 
                             <div class="row">
-                                <div class="col-md-12">
-                                    <!-- <div class="col-sm-2"> -->
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" name="membershipCheckbox[]"
-                                                id="membershipCheckbox1" value="">
-                                            I have read and agreed to the terms and conditions set out above.
-                                        </label>
-                                    </div>
-                                    <!-- </div> -->
+                                <div style="text-align:center;margin-top:40px;">
+                                    <span class="steps"></span>
+                                    <span class="steps"></span>
+                                    <span class="steps"></span>
+                                    <span class="steps"></span>
+                                    <span class="steps"></span>
+                                    <span class="steps"></span>
                                 </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-6 d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="button" class="btn btn-info" id="prevBtn" onclick="nextPrev(-1)">
+                                        Previous
+                                    </button>
                                 </div>
                                 <div class="col-md-6 d-flex justify-content-start">
-                                    <button type="reset" class="btn btn-danger">Reset</button>
+                                    <button type="button" class="btn btn-primary" id="nextBtn"
+                                        onclick="nextPrev(1)">Next</button>
                                 </div>
                             </div>
 
-
-
                         </form>
-
-
                     </div>
                 </div>
             </div>
@@ -546,6 +640,7 @@
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
     <script src="js/Chart.roundedBarCharts.js"></script>
+    <script src="js/register.js"></script>
     <!-- End custom js for this page-->
 </body>
 
