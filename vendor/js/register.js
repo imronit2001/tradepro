@@ -74,6 +74,22 @@ function fixStepIndicator(n) {
   }
   //... and adds the "active" class to the current step:
   x[n].className += " active";
+
+  let progress = document.getElementsByClassName("progress");
+
+  for (i = 0; i < n; i++) {
+    progress[i].classList.add("bg-success");
+    progress[i].classList.remove("bg-info");
+    progress[i].classList.remove("bg-light");
+  }
+  progress[n].classList.add("bg-info");
+  progress[n].classList.remove("bg-success");
+  progress[n].classList.remove("bg-light");
+  for (i = n + 1; i < x.length; i++) {
+    progress[i].classList.add("bg-light");
+    progress[i].classList.remove("bg-info");
+    progress[i].classList.remove("bg-success");
+  }
 }
 
 function togglePassword(id) {
