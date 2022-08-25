@@ -66,16 +66,41 @@
 </head>
 
 <body>
-  <div class="container-scroller">
+  <nav class="navbar main-nav navbar-expand-lg p-0 fixed-top" style="z-index: 100;">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo" height="50"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="ti-menu"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown  dropdown-slide ">
+            <a class="nav-link" href="/">Home
+            </a>
+            <!-- Dropdown list -->
+
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/instant_one">Instant Loan</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-scroller mt-5">
     <div class="row">
       <div class="col-12 grid-margin stretch-card">
         <div class="card-body">
           <div class="card-body">
-            <div class="row" style="height:50px;">
-              <span style="width:150px; position: fixed; z-index: 2;">
-                <img src="images/logo.png" width="100%" alt="Tradepro">
-              </span>
-            </div>
+
             <h2 class="card-title text-center">Customer Registration Form</h2>
             <p class="card-description text-center">
               (Please fillup your information carefully)
@@ -114,16 +139,16 @@
                 <h4 class="card-title">Personal Information</h4>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">First Name</label>
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">First Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Last Name</label>
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Last Name</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" />
                       </div>
@@ -131,42 +156,46 @@
                   </div>
                 </div>
                 <div class="col-md-12">
-                  <div class="form-group row">
-                    <label class="col-sm-2 col-form-label">Constitution of the Customer :</label>
-                    <div class="col-sm-2">
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="membershipCheckbox[]"
-                            id="membershipCheckbox1" value="" checked />
-                          Partnership
-                        </label>
+                  <div class="form-group">
+                    <label class="col-sm-12 col-form-label">Constitution of the Customer </label>
+                    <div class="col-sm-12 row">
+
+
+                      <div class="col-sm-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="membershipRadio" id="membershipCheckbox1"
+                              value="" checked />
+                            Partnership
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="membershipCheckbox[]"
-                            id="membershipCheckbox2" value="option2" />
-                          Proprietorship
-                        </label>
+                      <div class="col-sm-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="membershipRadio" id="membershipCheckbox2"
+                              value="option2" />
+                            Proprietorship
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="membershipCheckbox[]"
-                            id="membershipCheckbox2" value="option2" />
-                          Private Limited
-                        </label>
+                      <div class="col-sm-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="membershipRadio" id="membershipCheckbox2"
+                              value="option2" />
+                            Private Limited
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" name="membershipCheckbox[]"
-                            id="membershipCheckbox2" value="option2" />
-                          Public Limited
-                        </label>
+                      <div class="col-sm-3">
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="membershipRadio" id="membershipCheckbox2"
+                              value="option2" />
+                            Public Limited
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -177,84 +206,84 @@
                 <h4 class="card-title">Registered Address</h4>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Unit No</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-7 col-form-label">Unit No</label>
+                      <div class="col-sm-5">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">City</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-7 col-form-label">City</label>
+                      <div class="col-sm-5">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Complete Address</label>
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Complete Address</label>
                       <div class="col-sm-12">
                         <textarea class="form-control" rows="4"></textarea>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Pin Code</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-7 col-form-label">Pin Code</label>
+                      <div class="col-sm-5">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">State</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-7 col-form-label">State</label>
+                      <div class="col-sm-5">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                 </div>
-
+                <h4 class="card-title">Contact Details</h4>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Contact Person</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Contact Person</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Mobile Number</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Mobile Number</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Landline Number</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Landline Number</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Fax No</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Fax No</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Email Id</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Email Id</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
@@ -266,52 +295,52 @@
                 <h4 class="card-title">Billing Address</h4>
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Billing Address</label>
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Billing Address</label>
                       <div class="col-sm-12">
                         <textarea class="form-control" rows="4"></textarea>
                       </div>
                     </div>
                   </div>
                 </div>
-
+                <h4 class="card-title">Contact Details</h4>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Contact Person</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Contact Person</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Mobile Number</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Mobile Number</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Landline Number</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Landline Number</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Fax No</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Fax No</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Email Id</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Email Id</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
@@ -320,55 +349,55 @@
               </div>
 
               <div class="step p-3">
-                <h4 class="card-title">Factory/ Warehouse Address</h4>
+                <h4 class="card-title">Factory / Warehouse Address</h4>
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Factory/ Warehouse Address</label>
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Factory / Warehouse Address</label>
                       <div class="col-sm-12">
                         <textarea class="form-control" rows="4"></textarea>
                       </div>
                     </div>
                   </div>
                 </div>
-
+                <h4 class="card-title">Contact Details</h4>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Contact Person</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Contact Person</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Mobile Number</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Mobile Number</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Landline Number</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Landline Number</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Fax No</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Fax No</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Email Id</label>
-                      <div class="col-sm-9">
+                    <div class="form-group">
+                      <label class="col-sm-6 col-form-label">Email Id</label>
+                      <div class="col-sm-8">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
@@ -389,8 +418,8 @@
 
                     <div class="row">
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Name :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Name :
                           </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
@@ -398,8 +427,8 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Residential Address :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Residential Address :
                           </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
@@ -407,8 +436,8 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Residential Telephone :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Residential Telephone :
                           </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
@@ -416,8 +445,8 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Mobile :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Mobile :
                           </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
@@ -425,8 +454,8 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Email Id :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Email Id :
                           </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
@@ -434,8 +463,8 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Passport No :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Passport No :
                           </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
@@ -443,8 +472,8 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Photograph :
+                        <div class="form-group">
+                          <label class="col-sm-12 col-form-label">Photograph :
                           </label>
                           <div class="col-sm-9">
                             <input type="file" class="form-control" />
@@ -458,8 +487,8 @@
                     <div class="row">
                       <div class="row">
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Name :
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Name :
                             </label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" />
@@ -467,8 +496,8 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Residential Address:
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Residential Address:
                             </label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" />
@@ -476,8 +505,8 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Residential Telephone :
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Residential Telephone :
                             </label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" />
@@ -485,8 +514,8 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Mobile :
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Mobile :
                             </label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" />
@@ -494,8 +523,8 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Email Id :
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Email Id :
                             </label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" />
@@ -503,8 +532,8 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Passport No :
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Passport No :
                             </label>
                             <div class="col-sm-9">
                               <input type="text" class="form-control" />
@@ -512,8 +541,8 @@
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Photograph :
+                          <div class="form-group">
+                            <label class="col-sm-12 col-form-label">Photograph :
                             </label>
                             <div class="col-sm-9">
                               <input type="file" class="form-control" />
@@ -529,16 +558,16 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Company PAN</label>
+                    <div class="form-group">
+                      <label class="col-sm-12 col-form-label">Company PAN</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">CIN</label>
+                    <div class="form-group">
+                      <label class="col-sm-12 col-form-label">CIN</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" />
                       </div>
@@ -548,8 +577,8 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-6 col-form-label">Products proposed to be dealt with:</label>
+                    <div class="form-group">
+                      <label class="col-sm-12 col-form-label">Products proposed to be dealt with:</label>
                       <div class="col-sm-6">
                         <input type="text" class="form-control" />
                       </div>
@@ -562,16 +591,16 @@
                 </h4>
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Monthly average INR</label>
+                    <div class="form-group">
+                      <label class="col-sm-12 col-form-label">Monthly average INR</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" />
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label">Annual estimate INR</label>
+                    <div class="form-group">
+                      <label class="col-sm-12 col-form-label">Annual estimate INR</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" />
                       </div>
@@ -581,8 +610,8 @@
 
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="form-group row">
-                      <label class="col-sm-6 col-form-label">Requested credit limit from Suumaya INR.
+                    <div class="form-group">
+                      <label class="col-sm-12 col-form-label">Requested credit limit from Suumaya INR.
                       </label>
                       <div class="col-sm-6">
                         <input type="text" class="form-control" />
@@ -595,33 +624,33 @@
               <div class="step p-3">
                 <div class="card-title">Documents Checklist</div>
                 <div class="row">
-                  <div class="col-sm-6 d-flex my-3">
-                    <label class="col-sm-3">COI</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">COI</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
-                  <div class="col-sm-6 d-flex my-3">
-                    <label class="col-sm-3">MOA</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">MOA</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
-                  <div class="col-sm-6 d-flex my-3">
-                    <label class="col-sm-3">AOA</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">AOA</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
-                  <div class="col-sm-6 d-flex my-3">
-                    <label class="col-sm-3">PAN</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">PAN</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
-                  <div class="col-sm-6 d-flex my-3">
-                    <label class="col-sm-3">TAN</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">TAN</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
-                  <div class="col-sm-6 d-flex my-3">
-                    <label class="col-sm-3">GST Certificate</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">GST Certificate</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
-                  <div class="col-sm-7 d-flex my-3">
-                    <label class="col-sm-4">Cancelled Cheque</label>
-                    <input type="file" class="form-control">
+                  <div class="col-sm-6 my-3">
+                    <label class="col-sm-12">Cancelled Cheque</label>
+                    <input type="file" class="form-control col-sm-12">
                   </div>
 
                 </div>
@@ -727,7 +756,7 @@
 
                 <button type="button" class="btn btn-primary m-2" style="width: 150px;" id="nextBtn"
                   onclick="nextPrev(1)">
-                  Next
+                  Save & Next
                 </button>
 
               </div>
