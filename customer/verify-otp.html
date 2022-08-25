@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Supplier Login</title>
+    <title>Reset Your Password</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/feather/feather.css" />
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
@@ -57,40 +57,22 @@
     <div class="container-scroller mt-5">
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
-                <div class="card-body">
+                <div class="card-body" id="reset-password">
                     <div class="card-body">
-                        <!-- <div class="row" style="height:50px;">
-                            <span style="width:150px; position: fixed; z-index: 2;">
-                                <img src="images/logo.png" width="100%" alt="Tradepro">
-                            </span>
-                        </div> -->
-                        <h2 class="card-title text-center">Supplier Login</h2>
-
+                        <h2 class="card-title text-center">Reset Your Password Here</h2>
                         <form class="form-sample p-4 col-md-6 m-auto card mt-5 border" id="regForm" method="post">
-                            <div class="row">
-                                <div class="form-group">
-                                    <label for="mobile">Mobile</label>
-                                    <input type="tel" minlength="10" maxlength="10" class="form-control" id="mobile"
-                                        placeholder="Mobile" />
+                            <h4 class="card-title text-center">OTP Verification</h4>
+                            <div class="row d-flex  flex-column">
+                                <div
+                                    class="col-md-6 d-flex align-items-center flex-column m-auto justify-content-center">
+                                    <div class="form-group w-100">
+                                        <label for="exampleInputEmail1">Enter Your OTP</label>
+                                        <input type="tel" class="form-control" placeholder="Enter Your OTP" required />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword4">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword4"
-                                        placeholder="Password" />
-                                </div>
-                                <div class="d-flex align-items-center flex-wrap">
-                                    <div class="col-md-3 mx-1">
-                                        <button class="btn btn-primary">Login</button>
-                                    </div>
-                                    <div class="col-md-3 mx-1">
-                                        <p><a href="forget-password.html">Forget Password?</a></p>
-                                    </div>
-                                    <div class="col-md-5 mx-1">
-                                        <p>
-                                            Don't have account?
-                                            <a href="register.html">Register Here</a>
-                                        </p>
-                                    </div>
+                                <div class="col-md-6 m-auto d-flex align-items-center justify-content-center">
+                                    <button type="button" class="btn btn-primary"
+                                        onclick="verify_otp();">Verify</button>
                                 </div>
                             </div>
                         </form>
@@ -127,6 +109,48 @@
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
     <script src="js/Chart.roundedBarCharts.js"></script>
+    <script>
+        // verify_otp();
+        function verify_otp() {
+            let content = `
+                        <form class="form-sample p-4 col-md-6 mt-5 m-auto card border" id="regForm" method="post">
+                            <h4 class="card-title text-center">Enter Your New Password</h4>
+                                    <div
+                                        class="col-md-6 d-flex align-items-center flex-column m-auto justify-content-center">
+                                        <div class="form-group w-100">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Password">
+                                        </div>
+                                        
+                                        <div class="form-group w-100">
+                                            <label for="exampleInputPassword2">Confirm Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                                placeholder="Confirm Password">
+                                        </div>
+
+                                <div class="col-md-6 m-auto d-flex align-items-center justify-content-center">
+                                    <button type="button" class="btn btn-primary" onclick="reset_password();">Reset Password</button>
+                                </div>
+                            </div>
+                        </form>
+            `;
+            document.getElementById("reset-password").innerHTML = content;
+        }
+
+        function reset_password() {
+            window.location = "login.html";
+        }
+
+        function togglePassword(id) {
+            let x = document.getElementById(id);
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
     <!-- End custom js for this page-->
 </body>
 
