@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Customer Login</title>
+  <title>Buyer Login</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css" />
   <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
@@ -25,23 +25,53 @@
 </head>
 
 <body>
-  <div class="container-scroller">
+  <nav class="navbar main-nav navbar-expand-lg p-0 fixed-top" style="z-index: 100;">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo" height="50"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="ti-menu"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown  dropdown-slide ">
+            <a class="nav-link" href="/">Home
+            </a>
+            <!-- Dropdown list -->
+
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/instant_one">Instant Loan</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-scroller mt-5">
     <div class="row">
       <div class="col-12 grid-margin stretch-card">
         <div class="card-body">
           <div class="card-body">
-            <div class="row" style="height:50px;">
+            <!-- <div class="row" style="height:50px;">
               <span style="width:150px; position: fixed; z-index: 2;">
                 <img src="images/logo.png" width="100%" alt="Tradepro">
               </span>
-            </div>
-            <h2 class="card-title text-center">Customer Login</h2>
+            </div> -->
+            <h2 class="card-title text-center">Buyer Login</h2>
 
             <form class="form-sample p-4 col-md-6 m-auto card mt-5 border" id="regForm" method="post">
               <div class="row">
                 <div class="form-group">
-                  <label for="exampleInputEmail3">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" />
+                  <label for="mobile">Mobile</label>
+                  <input type="tel" minlength="10" maxlength="10" class="form-control" id="mobile"
+                    placeholder="Mobile" />
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword4">Password</label>

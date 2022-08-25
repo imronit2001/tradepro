@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Vendor Registration</title>
+    <title>Supplier Registration</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/feather/feather.css" />
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
@@ -101,7 +101,7 @@
                 <div class="card-body">
                     <div class="card-body">
 
-                        <h2 class="card-title text-center">Vendor Registration Form</h2>
+                        <h2 class="card-title text-center">Supplier Registration Form</h2>
                         <p class="card-description text-center">
                             (Please fillup your information carefully)
                         </p>
@@ -132,9 +132,65 @@
                             <div class="progress bg-light   text-center border">
                                 <p class="m-auto">8</p>
                             </div>
+                            <div class="progress bg-light   text-center border">
+                                <p class="m-auto">9</p>
+                            </div>
                         </div>
 
                         <form class="form-sample p-4 col-md-10 m-auto card mt-5 border" id="regForm" method="post">
+
+                            <div class="step p-3">
+                                <h4 class="card-title text-center">Create Your New Account</h4>
+                                <div class="row">
+                                    <div
+                                        class="col-md-6 d-flex align-items-center flex-column m-auto justify-content-center">
+                                        <div class="form-group w-100">
+                                            <label for="exampleInputEmail1">Mobile No</label>
+                                            <input type="tel" minlength="10" maxlength="10" class="form-control"
+                                                placeholder="Mobile No" required />
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Password">
+                                        </div>
+                                        <div class="form-check form-check-flat form-check-primary w-100">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"
+                                                    onclick="togglePassword('exampleInputPassword1');">
+                                                Show Password
+                                            </label>
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <label for="exampleInputPassword2">Confirm Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2"
+                                                placeholder="Confirm Password">
+                                        </div>
+                                        <div class="form-check form-check-flat form-check-primary w-100">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input"
+                                                    onclick="togglePassword('exampleInputPassword2');">
+                                                Show Password
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step p-3">
+                                <h4 class="card-title text-center">OTP Verification</h4>
+                                <div class="row">
+                                    <div
+                                        class="col-md-6 d-flex align-items-center flex-column m-auto justify-content-center">
+                                        <div class="form-group w-100">
+                                            <label for="exampleInputEmail1">Enter Your OTP</label>
+                                            <input type="tel" class="form-control" placeholder="Enter Your OTP"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="step p-3">
                                 <h4 class="card-title">Personal Information</h4>
                                 <div class="row">
@@ -637,45 +693,7 @@
                                 </div>
                             </div>
 
-                            <div class="step p-3">
-                                <h4 class="card-title">Account Information</h4>
-                                <div class="row">
-                                    <div
-                                        class="col-md-6 d-flex align-items-center flex-column m-auto justify-content-center">
-                                        <div class="form-group w-100">
-                                            <label for="exampleInputEmail1">Mobile No</label>
-                                            <input type="tel" minlength="10" maxlength="10" class="form-control"
-                                                placeholder="Mobile No" required />
-                                        </div>
-                                        <div class="form-group w-100">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Password">
-                                        </div>
-                                        <div class="form-check form-check-flat form-check-primary w-100">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    onclick="togglePassword('exampleInputPassword1');">
-                                                Show Password
-                                            </label>
-                                        </div>
-                                        <div class="form-group w-100">
-                                            <label for="exampleInputPassword2">Confirm Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2"
-                                                placeholder="Confirm Password">
-                                        </div>
-                                        <div class="form-check form-check-flat form-check-primary w-100">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input"
-                                                    onclick="togglePassword('exampleInputPassword2');">
-                                                Show Password
-                                            </label>
-                                        </div>
-                                    </div>
 
-
-                                </div>
-                            </div>
 
                             <div class="step p-3">
                                 <h4 class="card-title">Terms and Conditions</h4>
@@ -740,6 +758,7 @@
                             </div>
                             <div class="row">
                                 <div style="text-align: center; margin-top: 40px">
+                                    <span class="step2"></span>
                                     <span class="step2"></span>
                                     <span class="step2"></span>
                                     <span class="step2"></span>
