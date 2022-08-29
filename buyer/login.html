@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Admin Login</title>
+  <title>Buyer Login</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="/vendors/feather/feather.css" />
   <link rel="stylesheet" href="/vendors/mdi/css/materialdesignicons.min.css" />
@@ -16,7 +16,7 @@
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
-  <link rel="stylesheet" href="js/select.dataTables.min.css" />
+  <link rel="stylesheet" href="/js/select.dataTables.min.css" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/css/vertical-layout-light/style.css" />
@@ -25,32 +25,70 @@
 </head>
 
 <body>
-  <div class="container-scroller">
+  <nav class="navbar main-nav navbar-expand-lg p-0 fixed-top" style="z-index: 100;">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="logo" height="50"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="ti-menu"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown  dropdown-slide ">
+            <a class="nav-link" href="/">Home
+            </a>
+            <!-- Dropdown list -->
+
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/instant_one">Instant Loan</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-scroller mt-5">
     <div class="row">
       <div class="col-12 grid-margin stretch-card">
         <div class="card-body">
           <div class="card-body">
-            <div class="row" style="height:50px;">
+            <!-- <div class="row" style="height:50px;">
               <span style="width:150px; position: fixed; z-index: 2;">
                 <img src="/images/logo.png" width="100%" alt="Tradepro">
               </span>
-            </div>
-            <h2 class="card-title text-center">Admin Login</h2>
+            </div> -->
+            <h2 class="card-title text-center">Buyer Login</h2>
 
             <form class="form-sample p-4 col-md-6 m-auto card mt-5 border" id="regForm" method="post">
               <div class="row">
                 <div class="form-group">
-                  <label for="exampleInputEmail3">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email" required />
+                  <label for="mobile">Mobile</label>
+                  <input type="tel" minlength="10" maxlength="10" class="form-control" id="mobile"
+                    placeholder="Mobile" />
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword4">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password"
-                    required />
+                  <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password" />
                 </div>
-                <div class="d-flex align-items-center">
-                  <div class="col-md-2">
+                <div class="d-flex align-items-center flex-wrap">
+                  <div class="col-md-3 mx-1">
                     <button class="btn btn-primary">Login</button>
+                  </div>
+                  <div class="col-md-3 mx-1">
+                    <p><a href="forget-password.html">Forget Password?</a></p>
+                  </div>
+                  <div class="col-md-5 mx-1">
+                    <p>
+                      Don't have account?
+                      <a href="signup.html">Sign Up</a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -60,6 +98,13 @@
       </div>
     </div>
   </div>
+  <footer class="fixed-bottom">
+    <div class="text-center bg-dark py-2">
+      <small class="text-secondary">Copyright &copy;
+        2022 by Tradepro
+      </small class="text-secondary">
+    </div>
+  </footer>
   <!-- container-scroller -->
 
   <!-- plugins:js -->
