@@ -18,11 +18,11 @@ function validateForm() {
     flag = false;
   }
 
-  if ((domain.value = "")) {
+  if (domain.value == "") {
     domain.classList.add("border-danger");
     flag = false;
   }
-  if ((entitytype.value = "")) {
+  if (entitytype.value == "") {
     entitytype.classList.add("border-danger");
     flag = false;
   }
@@ -54,23 +54,77 @@ function fetchDomain(domain) {
   }
 }
 
-function signup(e) {
+async function signup(e) {
   e.preventDefault();
   if (!validateForm()) return false;
   signupbtn.disabled = true;
   signupbtn.innerHTML = `<img src="https://c.tenor.com/XK37GfbV0g8AAAAj/loading-cargando.gif" alt="Please Wait" height=100% /> Please Wait`;
   $("#signup-form input, #signup-form select").attr("disabled", true);
+
+  let name = document.getElementById("name");
+  let domain = document.getElementById("domain");
+  if (domain.value == "others") {
+    domain = document.getElementById("customdomain").value;
+  }
+  // alert(domain.value);
+  let entityname = document.getElementById("entityname");
+  let entitytype = document.getElementById("entitytype");
+  if (entitytype.value == "others") {
+    entitytype = document.getElementById("customentitytype").value;
+  }
+  // alert(entitytype.value);
+  let usertype = document.getElementById("usertype");
+  let email = document.getElementById("email");
+  let mobile = document.getElementById("mobile");
+  let pass = document.getElementById("password");
+
+  // alert(domain.value + " " + entitytype.value);
+
+  await fetch("http://localhost:8000/api/register/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "raw",
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      name: name.value,
+      domain: domain.value,
+      supplier_name: entityname.value,
+      supplier_type: entitytype.value,
+      usertype: usertype.value,
+      email: email.value,
+      mobile_number: mobile.value,
+      password: pass.value,
+    }),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      if (data.status == "success") {
+        setTimeout(() => {
+          signupbtn.classList.remove("btn-primary");
+          signupbtn.classList.add("btn-success");
+          signupbtn.innerHTML = `<img src="https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif" alt="Success" height=100% /> Registered`;
+        }, 2000);
+      } else {
+        setTimeout(() => {
+          signupbtn.classList.remove("btn-primary");
+          signupbtn.classList.add("btn-danger");
+          signupbtn.innerHTML = `Error`;
+        }, 2000);
+      }
+    });
+
   setTimeout(() => {
-    signupbtn.classList.remove("btn-primary");
-    signupbtn.classList.add("btn-success");
-    signupbtn.innerHTML = `<img src="https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif" alt="Success" height=100% /> Registered`;
-  }, 2000);
-  setTimeout(() => {
+    signupbtn.classList.remove("btn-danger");
     signupbtn.classList.remove("btn-success");
     signupbtn.classList.add("btn-primary");
     signupbtn.innerHTML = "Signup";
     signupbtn.disabled = false;
     $("#signup-form input, #signup-form select").attr("disabled", false);
+    location.reload();
   }, 2000);
 }
 
