@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Supplier Registration</title>
+    <title>Lander Registration</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="vendors/feather/feather.css" />
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
@@ -140,10 +140,10 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="card-title">Supplier Registration : <span id="total-supplier"></span>
+                                        <h4 class="card-title">Lander Registration : <span id="total-lander"></span>
                                         </h4>
                                         <select class="form-select w-25" name="filter" id="filter"
-                                            onchange="fetch_supplier(this.value);">
+                                            onchange="fetch_lander(this.value);">
                                             <option value="all" selected>Show All</option>
                                             <option value="today">Today</option>
                                             <option value="week">This Week</option>
@@ -163,7 +163,7 @@
                                                     <th>Entity Type</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="fetch-supplier">
+                                            <tbody id="fetch-lander">
                                             </tbody>
                                         </table>
                                         <div id="loading" class="p-2 d-flex align-items-center flex-column">
