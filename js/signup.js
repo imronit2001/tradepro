@@ -8,7 +8,15 @@ function validateForm() {
   let customentity = document.getElementById("customentity");
   let email = document.getElementById("email");
   let mobile = document.getElementById("mobile");
+  let pass = document.getElementById("password");
+  let cpass = document.getElementById("cpassword");
   let flag = true;
+
+  if (cpass.value !== pass.value) {
+    pass.classList.add("border-danger");
+    cpass.classList.add("border-danger");
+    flag = false;
+  }
 
   if ((domain.value = "")) {
     domain.classList.add("border-danger");
@@ -64,4 +72,26 @@ function signup(e) {
     signupbtn.disabled = false;
     $("#signup-form input, #signup-form select").attr("disabled", false);
   }, 2000);
+}
+
+function togglePassword(input, button) {
+  let inpfield = document.getElementById(input);
+  let eyefield = document.getElementById(button);
+
+  if (inpfield.type === "password") {
+    inpfield.type = "text";
+    eyefield.classList.remove("fa-eye-slash");
+    eyefield.classList.add("fa-eye");
+  } else {
+    inpfield.type = "password";
+    eyefield.classList.remove("fa-eye");
+    eyefield.classList.add("fa-eye-slash");
+  }
+}
+
+function removeBorderDanger() {
+  let pass = document.getElementById("password");
+  let cpass = document.getElementById("cpassword");
+  pass.classList.remove("border-danger");
+  cpass.classList.remove("border-danger");
 }
